@@ -55,11 +55,20 @@
       <h1 id="logo-wrap">
         <a href="/" id="logo">沧浪湖</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">沧浪之水清兮，可以濯我缨；沧浪之水浊兮，可以濯我足</a>
-        </h2>
-      
+		
+		<span id="subtitle"></span>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+		<script>
+			var typed = new Typed("#subtitle", {
+				strings: ['沧浪之水清兮，可以濯我缨；沧浪之水浊兮，可以濯我足',''],
+				startDelay: 300,
+				typeSpeed: 100,
+				loop: true,
+				backSpeed: 50,
+				showCursor: true
+			});
+		</script>
+		
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
