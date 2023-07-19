@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://azurelake.cn/posts/d7626083ba99/</loc>
+    
+    <lastmod>2023-07-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://azurelake.cn/posts/31c74f0b96cf/</loc>
     
     <lastmod>2023-07-16</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://azurelake.cn/posts/b4a7bdf4823a/</loc>
-    
-    <lastmod>2023-07-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://azurelake.cn/posts/d7626083ba99/</loc>
     
     <lastmod>2023-07-16</lastmod>
     
@@ -322,6 +322,13 @@
   
   <url>
     <loc>https://azurelake.cn/tags/%E7%AE%B4%E8%A8%80/</loc>
+    <lastmod>2023-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://azurelake.cn/tags/%E4%BA%BA%E7%94%9F%E5%8A%B1%E5%BF%97/</loc>
     <lastmod>2023-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
