@@ -326,19 +326,19 @@
   </entry>
   
   <entry>
-    <title>ipv6开通了</title>
+    <title>IPv6开通了</title>
     <link href="https://azurelake.cn/posts/0b0a6d7f3145/"/>
     <id>https://azurelake.cn/posts/0b0a6d7f3145/</id>
     <published>2019-08-17T02:33:53.000Z</published>
-    <updated>2023-07-16T03:57:27.214Z</updated>
+    <updated>2023-07-20T08:56:57.318Z</updated>
     
-    <content type="html"><![CDATA[<p>今天查看电脑IP，偶然发现IPv6竟然是激活的。打开<a href="https://www.test-ipv6.com/">IPv6连接测试</a>,发现公网IPv6地址有了，IPv6状况评分是10&#x2F;10。</p><p>搜索“ipv6 网站”，找到几个直播网站 <a href="http://iptv.pdsu.edu.cn/">平顶山学院IPTV</a> 、<a href="http://tv.byr.cn/show">北京邮电大学IPTV</a> ，<a href="http://ipv6.cau.edu.cn/">中国农业大学</a> 、<a href="http://www.ipv6.fudan.edu.cn/">复旦大学</a> 。看来还是教育网的IPv6网站居多。</p><p>又找到一个ipv6<a href="http://ipv6link.cn/">导航网站</a>，唉，ipv6资源真少呀，好多还打不开。</p><p>看看国内几个大站吧：</p><p>1.<a href="https://ipv6.baidu.com/">百度</a>唯一可以网页打开；</p><blockquote><p>PING ipv6.baidu.com(2400:da00:2::29 (2400:da00:2::29)) 56 data bytes<br>64 bytes from 2400:da00:2::29 (2400:da00:2::29): icmp_seq&#x3D;1 ttl&#x3D;51 time&#x3D;57.4 ms</p></blockquote><p>2.其它都是App，无法确认。</p>]]></content>
+    <content type="html"><![CDATA[<p>今天查看电脑IP，偶然发现IPv6竟然是激活的。打开<a href="https://www.test-ipv6.com/">IPv6连接测试</a>,发现公网IPv6地址有了，IPv6状况评分是10&#x2F;10。</p><p>搜索“IPv6 网站”，找到几个直播网站 <a href="http://iptv.pdsu.edu.cn/">平顶山学院IPTV</a> 、<a href="http://tv.byr.cn/show">北京邮电大学IPTV</a> ，<a href="http://ipv6.cau.edu.cn/">中国农业大学</a> 、<a href="http://www.ipv6.fudan.edu.cn/">复旦大学</a> 。看来还是教育网的IPv6网站居多。</p><p>又找到一个IPv6<a href="http://ipv6link.cn/">导航网站</a>，唉，IPv6资源真少呀，好多还打不开。</p><p>看看国内几个大站吧：</p><p>1.<a href="https://ipv6.baidu.com/">百度</a>唯一可以网页打开；</p><blockquote><p>PING ipv6.baidu.com(2400:da00:2::29 (2400:da00:2::29)) 56 data bytes<br>64 bytes from 2400:da00:2::29 (2400:da00:2::29): icmp_seq&#x3D;1 ttl&#x3D;51 time&#x3D;57.4 ms</p></blockquote><p>2.其它都是App，无法确认。</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;今天查看电脑IP，偶然发现IPv6竟然是激活的。打开&lt;a href=&quot;https://www.test-ipv6.com/&quot;&gt;IPv6连接测试&lt;/a&gt;,发现公网IPv6地址有了，IPv6状况评分是10&amp;#x2F;10。&lt;/p&gt;
-&lt;p&gt;搜索“ipv6 网站”，找到几个直播网站</summary>
+&lt;p&gt;搜索“IPv6 网站”，找到几个直播网站</summary>
       
     
     
