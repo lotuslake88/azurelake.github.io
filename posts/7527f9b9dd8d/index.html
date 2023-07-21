@@ -14,7 +14,7 @@
 </script>
 
   
-  <title>归档: 2019 | 沧浪湖</title>
+  <title>思科交换机被入侵了嘛？ | 沧浪湖</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
     <meta name="description" content="沧浪&#39;s Blog，沧浪之水清兮，可以濯我缨；沧浪之水浊兮，可以濯我足。">
@@ -109,143 +109,154 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-
-  
-  
+        <section id="main"><article id="post-cisco-switches-vulnerabilities" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
     
     
-    <section class="archives-wrap">
-      <div class="archive-title">
+      <header class="article-header">
         
-          <i class="fa fa-date"></i>
-          2019
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      思科交换机被入侵了嘛？
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2023-07-02T05:25:43.000Z" itemprop="datePublished">2023年07月02日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+  </div>
+
+      
+        <span class="article-views">
+  <i class="fa fa-views"></i>
+  <i id="busuanzi_container_page_pv">
+      <i id="busuanzi_value_page_pv"></i>
+  </i>
+</span>
+
+      
+      
+<a href="/posts/7527f9b9dd8d/#comments" class="article-comment-link">
+  
+    
+    
+    
+    
+    
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>6月28日晚上，发现Nas在18点28分时有不正常重启记录，但检查Nas的<code>/var/log/message</code>、<code>/var/log/cron </code>等文件，又没有什么异常。看进程、网络也没有什么异常，不过心里还是忐忑不安，毕竟现在网络安全漏洞太多，稍有不甚，就可能被攻击了。</p>
+<p>7月2日，登录思科交换机发现，截至6月28日18点31分起，以前日志全部被清理，难道是思科交换机有安全漏洞，导致Nas受牵连了？上网搜索<code>思科交换机 安全漏洞 CVE-2023</code>，果不其然，今年四月份，思科多款 Small Business 系列交换机中存在四个严重的远程代码执行漏洞，且利用代码已遭公开。</p>
+<blockquote>
+<p>这四个漏洞的 CVSS 评分为9.8分，如遭成功利用可导致未认证的攻击者以根权限在受攻陷设备上执行任意代码。这些漏洞的CVE漏洞编号是CVE-2023-20159、CVE-2023-20160、CVE-2023-20161和CVE-2023-20189，均由对目标交换机 web 接口发送的请求验证不当引发。</p>
+<p>攻击者可在复杂度低下的攻击中，利用目标设备 web 用户接口发送特殊构造的请求，利用这些漏洞。思科解释称，“这些漏洞之间不存在相互依赖关系。利用其中一个漏洞时无需利用其它漏洞。另外，受其中一个漏洞影响的软件发布可能不会受其它漏洞的影响。”</p>
+<p>受影响的思科交换机包括：</p>
+<p>250 Series Smart Switches、350 Series Managed Switches、350X Series Stackable Managed Switches和550X Series Stackable Managed Switches （已在固件版本2.5.9.16中修复）</p>
+<p>Business 250 Series Smart Switches 和 Business 350 Series Managed Switches（已在固件版本3.3.0.16中修复）</p>
+<p>Small Business 200 Series Smart Switches、Small Business 300 Series Managed Switches、Small Business 500 Series Stackable Managed Switches（无补丁）</p>
+<p>思科表示，200、300以及500系列的 Small Business 交换机固件将不会得到补丁，因为这些设备已经进入生命周期末期。</p>
+<p>思科产品安全事件响应团队 (PSIRT) 还披露称，这些漏洞的 PoC 代码已存在，可导致攻击者活跃利用。本周三，思科提醒称，PSIRT发现这些漏洞的“PoC 利用代码已存在”，可导致攻击者攻击暴露到远程访问的易受攻击设备。不过，幸运的是，思科尚未发现漏洞遭利用的迹象。</p>
+<p>思科还在着手修复位于 Prime Collaboration Deployment (PCD) 服务器管理工具中的一个 XSS 漏洞。该漏洞由北约网络安全中心研究员 Pierre Vivegnis 发现。</p>
+<p>美国、英国和思科公司最近联合发布安全公告提醒称，俄罗斯军队黑客组织 APT28 已在思科 IOS 路由器上部署自定义 “Jaguar Tooth（美洲虎牙齿）”，获得对受陷设备的未认证访问权限。</p>
+</blockquote>
+<p>新固件版本在今年四月中旬已经发布，可惜我没有看到。按正常情况，思科交换机每天产生网络连接情况的日志，在这两个很近时间段，发现日志被无故清理，感觉思科交换机应该被入侵过，希望造成影响不大。</p>
+<p>新版固件下载后，三下五除二，更新升级完思科交换机。但是又觉得不可靠，将交换机重置，来一次彻底更新升级固件，登录密码重新设置一遍，希望没有隐藏的后门在里面。</p>
+
+        
+            <div id="toc-article">
+                
+  <div class="widget-wrap" id="toc-wrap">
+    <h3 class="widget-title"><i class="fa fa-toc"></i> 文章目录</h3>
+    <div class="widget">
+      
+    </div>
+  </div>
+
+
+            </div>
+        
+        
+          <blockquote id="copyright">
+              <p>原文链接: <a href="https://azurelake.cn/posts/7527f9b9dd8d/">https://azurelake.cn/posts/7527f9b9dd8d/</a></p>
+              <p>版权声明: 转载请注明出处(必须保留作者署名及链接)</p>
+          </blockquote>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E/" rel="tag">安全漏洞</a></li></ul>
+
+          
+    <div class="social-share">
+      <span>分享到:</span>
+    </div>
+
+
+
+        </div>
+      
+      
+        
+<nav id="article-nav">
+  
+    <a href="/posts/bacfc96f3e1b/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <div class="article-nav-title">
+        
+          C++20 Modules 尝鲜 Ⅱ
         
       </div>
-      <div class="archives">
-  
-  <ul class="archive-article archive-type-post">
-  <li class="archive-article-inner">
-    <a href="/posts/8bb8c560ec63/">
-      <time class="dt-published" datetime="2019-09-03T02:32:42.000Z" itemprop="datePublished">2019年09月03日</time>
-      | <span class="archive-article-title">Excel选中单元格行列高亮</span>
     </a>
-  </li>
-</ul>
-
-
   
   
-  <ul class="archive-article archive-type-post">
-  <li class="archive-article-inner">
-    <a href="/posts/0b0a6d7f3145/">
-      <time class="dt-published" datetime="2019-08-17T02:33:53.000Z" itemprop="datePublished">2019年08月17日</time>
-      | <span class="archive-article-title">IPv6开通了</span>
+    <a href="/posts/2f7824f8c458/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <div class="article-nav-title">
+        
+          七岁以下儿童生长标准
+        
+      </div>
     </a>
-  </li>
-</ul>
-
-
   
-  
-  <ul class="archive-article archive-type-post">
-  <li class="archive-article-inner">
-    <a href="/posts/d91a7ac5b9b4/">
-      <time class="dt-published" datetime="2019-08-15T00:42:55.000Z" itemprop="datePublished">2019年08月15日</time>
-      | <span class="archive-article-title">新的互联网围墙</span>
-    </a>
-  </li>
-</ul>
+</nav>
 
-
-  
-  
-  <ul class="archive-article archive-type-post">
-  <li class="archive-article-inner">
-    <a href="/posts/33336f8024fb/">
-      <time class="dt-published" datetime="2019-08-12T07:56:14.000Z" itemprop="datePublished">2019年08月12日</time>
-      | <span class="archive-article-title">在Git远程连接中配置SSH</span>
-    </a>
-  </li>
-</ul>
-
-
-  
-  
-  <ul class="archive-article archive-type-post">
-  <li class="archive-article-inner">
-    <a href="/posts/1c01682dddd4/">
-      <time class="dt-published" datetime="2019-08-11T09:11:39.000Z" itemprop="datePublished">2019年08月11日</time>
-      | <span class="archive-article-title">Swim</span>
-    </a>
-  </li>
-</ul>
-
-
-  
-  
-  <ul class="archive-article archive-type-post">
-  <li class="archive-article-inner">
-    <a href="/posts/18a18ee0a80d/">
-      <time class="dt-published" datetime="2019-08-07T08:59:53.000Z" itemprop="datePublished">2019年08月07日</time>
-      | <span class="archive-article-title">新版儿童生长发育参照标准</span>
-    </a>
-  </li>
-</ul>
-
-
-  
-  
-  <ul class="archive-article archive-type-post">
-  <li class="archive-article-inner">
-    <a href="/posts/17c744e65a8d/">
-      <time class="dt-published" datetime="2019-08-05T03:18:19.000Z" itemprop="datePublished">2019年08月05日</time>
-      | <span class="archive-article-title">个人职业评估</span>
-    </a>
-  </li>
-</ul>
-
-
-  
-  
-  <ul class="archive-article archive-type-post">
-  <li class="archive-article-inner">
-    <a href="/posts/fcf09fc22fb0/">
-      <time class="dt-published" datetime="2019-08-02T00:44:30.000Z" itemprop="datePublished">2019年08月02日</time>
-      | <span class="archive-article-title">简洁人生箴言</span>
-    </a>
-  </li>
-</ul>
-
-
-  
-  
-  <ul class="archive-article archive-type-post">
-  <li class="archive-article-inner">
-    <a href="/posts/8420bea7227f/">
-      <time class="dt-published" datetime="2019-07-29T00:10:26.000Z" itemprop="datePublished">2019年07月29日</time>
-      | <span class="archive-article-title">Github分支管理</span>
-    </a>
-  </li>
-</ul>
-
-
-  
-  
-  <ul class="archive-article archive-type-post">
-  <li class="archive-article-inner">
-    <a href="/posts/064ee797084f/">
-      <time class="dt-published" datetime="2019-07-27T02:14:26.000Z" itemprop="datePublished">2019年07月27日</time>
-      | <span class="archive-article-title">Hello</span>
-    </a>
-  </li>
-</ul>
+      
+      
+        
 
 
 
-  </div></section>
 
 
+
+
+
+      
+    </footer>
+  </div>
+</article>
 </section>
         
           <aside id="sidebar">
@@ -390,6 +401,16 @@
 
 
 
+
+  
+    
+<script src="/localshare/js/social-share.js"></script>
+
+    
+<script src="/localshare/js/qrcode.js"></script>
+
+  
+  
 
 
 
