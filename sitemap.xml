@@ -257,13 +257,6 @@
   </url>
   
   <url>
-    <loc>https://azurelake.cn/tags/Python/</loc>
-    <lastmod>2023-07-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://azurelake.cn/tags/Aruba/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -272,6 +265,13 @@
   
   <url>
     <loc>https://azurelake.cn/tags/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://azurelake.cn/tags/Python/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -292,13 +292,6 @@
   </url>
   
   <url>
-    <loc>https://azurelake.cn/tags/CMake/</loc>
-    <lastmod>2023-07-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://azurelake.cn/tags/Clang/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -306,14 +299,21 @@
   </url>
   
   <url>
-    <loc>https://azurelake.cn/tags/Excel/</loc>
+    <loc>https://azurelake.cn/tags/%E5%95%86%E5%8A%A1%E5%86%99%E4%BD%9C/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://azurelake.cn/tags/%E5%95%86%E5%8A%A1%E5%86%99%E4%BD%9C/</loc>
+    <loc>https://azurelake.cn/tags/CMake/</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://azurelake.cn/tags/Excel/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -378,14 +378,14 @@
   </url>
   
   <url>
-    <loc>https://azurelake.cn/categories/%E6%9D%82%E6%96%87%E7%AC%94%E6%9C%AD/</loc>
+    <loc>https://azurelake.cn/categories/English/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://azurelake.cn/categories/English/</loc>
+    <loc>https://azurelake.cn/categories/%E6%9D%82%E6%96%87%E7%AC%94%E6%9C%AD/</loc>
     <lastmod>2023-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
