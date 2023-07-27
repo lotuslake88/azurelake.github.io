@@ -202,7 +202,7 @@
         
         
           <blockquote id="copyright">
-              <p>原文链接: <a href="https://azurelake.cn/posts/17c744e65a8d/">https://azurelake.cn/posts/17c744e65a8d/</a></p>
+              <p>本文链接: <a href="https://azurelake.cn/posts/17c744e65a8d/">https://azurelake.cn/posts/17c744e65a8d/</a></p>
               <p>版权声明: 转载请注明出处(必须保留作者署名及链接)</p>
           </blockquote>
         
@@ -394,6 +394,7 @@
   </div>
 </footer>
 
+
     </div>
   </div>
   
@@ -418,6 +419,38 @@
 
   
 <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 复制添加版权信息 -->
+<script type="text/javascript">
+    var selfLogin = false;
+    var follow = $('#profile_block').find('#p_b_follow');
+    var block = follow.length >= 1 ? follow[0] : "";
+    var followText = (block != null && block != undefined) ? block.innerHTML : "";
+    if(followText == "") selfLogin = true;
+ 
+    var pageInfo = '\r\n---------------------\r\n'
+        + '© 版权声明：著作权归作者所有，商业转载请联系作者获得授权，非商业转载请注明出处。\r\n'
+        + '作者：Matrix\r\n源地址：' + document.location.href
+        + '\r\n来源：沧浪湖，转载请附上博文链接！';
+ 
+    document.addEventListener('copy', function (ev) {
+        var targetHTML = $.trim($(ev.target).html());
+        // console.log("targetHTML:" + targetHTML)
+        if (targetHTML == "") return;
+        if (!(targetHTML.startsWith('<table class="hljs-ln"') && targetHTML.endsWith('</table>')) || !selfLogin)  // isLogined
+        {
+            var selected = window.getSelection();
+            var selectedText = selected.toString();  
+            let copyRightStr = (selectedText + pageInfo).replace(/\n/g, '\r\n'); // Solve the line breaks conversion issue
+ 
+            ev.clipboardData.setData('text/plain', `${copyRightStr}`);
+            ev.preventDefault();
+        }
+    });
+</script>
 
 
 
@@ -450,6 +483,8 @@
 
   
   
+
+
 
 
 
