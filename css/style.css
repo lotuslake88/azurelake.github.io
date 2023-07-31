@@ -146,7 +146,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #63a4ba url("images/banner.webp") no-repeat top center;
+  background: #52c4c8 url("images/banner.webp") no-repeat top center;
   background-attachment: fixed;
   background-size: auto auto;
   font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -156,7 +156,7 @@ body {
 }
 @media (min-width: 1200px) {
   body {
-    background-size: 100% 100%;
+    background-size: 105% 100%;
   }
 }
 .hide {
@@ -241,7 +241,7 @@ body {
   line-height: 2.7;
   margin-top: 0;
   font-size: 16px;
-  border-bottom: 1px solid #63a4ba;
+  border-bottom: 1px solid #52c4c8;
 }
 #result-wrap,
 .article,
@@ -283,7 +283,7 @@ body {
 }
 .article-entry hr,
 .widget hr {
-  border: 1px dashed #63a4ba;
+  border: 1px dashed #52c4c8;
 }
 .article-entry strong,
 .widget strong {
@@ -362,8 +362,8 @@ body {
   box-sizing: border-box;
   padding: 10px;
   color: #555;
-  border: 1px solid #63a4ba;
-  border-left: 5px solid #40759b;
+  border: 1px solid #52c4c8;
+  border-left: 5px solid #279ab9;
 }
 .article-entry blockquote p,
 .widget blockquote p {
@@ -689,7 +689,7 @@ body {
   color: #adc2d7;
 }
 #search-result .item {
-  border-top: 1px solid #63a4ba;
+  border-top: 1px solid #52c4c8;
   padding: 8px 0;
 }
 #search-result .item:first-child {
@@ -706,7 +706,7 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 14px;
-  color: #40759b;
+  color: #279ab9;
 }
 #search-result .item .title:hover {
   text-decoration: underline;
@@ -750,7 +750,7 @@ body {
 .article-meta a {
   text-decoration: none;
   line-height: 1.2em;
-  color: #40759b;
+  color: #279ab9;
 }
 .article-meta a:hover {
   text-decoration: underline;
@@ -785,13 +785,13 @@ body {
 .article-header h1,
 .article-header h2 {
   padding-bottom: 10px;
-  border-bottom: 1px solid #63a4ba;
+  border-bottom: 1px solid #52c4c8;
 }
 .article-title {
   text-decoration: none;
   font-size: 1.5em;
   font-weight: bold;
-  color: #40759b;
+  color: #279ab9;
   line-height: 1.1em;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
@@ -799,7 +799,7 @@ body {
   transition: color 0.2s;
 }
 a.article-title:hover {
-  color: #40759b;
+  color: #279ab9;
 }
 .article-entry {
   color: #555;
@@ -836,7 +836,7 @@ a.article-title:hover {
   margin: 1.1em 0;
 }
 .article-entry a {
-  color: #40759b;
+  color: #279ab9;
   text-decoration: none;
 }
 .article-entry a:hover {
@@ -865,11 +865,11 @@ a.article-title:hover {
 }
 .article-entry th {
   font-weight: bold;
-  border-bottom: 3px solid #63a4ba;
+  border-bottom: 3px solid #52c4c8;
   padding-bottom: 0.5em;
 }
 .article-entry td {
-  border-bottom: 1px solid #63a4ba;
+  border-bottom: 1px solid #52c4c8;
   padding: 10px 0;
 }
 .article-entry .pullquote {
@@ -916,7 +916,7 @@ a.article-title:hover {
 .article-more-link a {
   display: inline-block;
   font-size: 14px;
-  color: #40759b;
+  color: #279ab9;
   text-decoration: none;
   line-height: 1.2em;
   padding: 6px 15px;
@@ -947,7 +947,7 @@ a.article-title:hover {
 .article-tag-wrap {
   margin-top: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #63a4ba;
+  border-bottom: 1px solid #52c4c8;
 }
 .article-tag-wrap .article-tag-list-item {
   float: right;
@@ -1002,7 +1002,7 @@ a.article-title:hover {
     margin-left: -4px;
     content: "";
     border-radius: 50%;
-    background: #63a4ba;
+    background: #52c4c8;
     -webkit-box-shadow: 0 1px 2px #fff;
     box-shadow: 0 1px 2px #fff;
   }
@@ -1044,7 +1044,7 @@ a.article-title:hover {
 .article-nav-caption {
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #63a4ba;
+  color: #52c4c8;
   line-height: 1em;
   font-weight: bold;
 }
@@ -1133,7 +1133,7 @@ a.article-title:hover {
 #reward-btn {
   display: inline-block;
   font-size: 16px;
-  color: #40759b;
+  color: #279ab9;
   text-decoration: none;
   line-height: 1.2em;
   padding: 6px 16px;
@@ -1145,7 +1145,7 @@ a.article-title:hover {
 }
 #reward-btn:hover {
   color: #fff;
-  background: #40759b;
+  background: #279ab9;
 }
 #reward-content {
   display: none;
@@ -1199,7 +1199,7 @@ a.article-title:hover {
   height: 240px;
 }
 .reward-tit {
-  color: #40759b;
+  color: #279ab9;
   font-size: 16px;
 }
 .reward-desc {
@@ -1210,8 +1210,8 @@ a.article-title:hover {
   padding: 10px 20px 20px 20px;
 }
 .archive-title {
-  border-bottom: 1px solid #63a4ba;
-  color: #40759b;
+  border-bottom: 1px solid #52c4c8;
+  color: #279ab9;
   text-decoration: none;
   font-size: 1.5em;
   font-weight: bold;
@@ -1219,7 +1219,7 @@ a.article-title:hover {
   line-height: 50px;
 }
 .archive-title .fa {
-  color: #40759b;
+  color: #279ab9;
   font-size: 1.5em;
   font-weight: normal;
   vertical-align: bottom;
@@ -1252,7 +1252,7 @@ a.article-title:hover {
   text-decoration: underline;
 }
 .archive-article-inner .archive-article-title {
-  color: #40759b;
+  color: #279ab9;
 }
 #page-nav {
   margin: 30px auto;
@@ -1285,7 +1285,7 @@ a.article-title:hover {
   line-height: 25px;
   padding: 5px 10px;
   text-align: center;
-  color: #40759b;
+  color: #279ab9;
   -webkit-box-shadow: 0 0 5px #adc2d7 inset;
   -webkit-box-shadow: 0 0 5px #adc2d7 inset;
   box-shadow: 0 0 5px #adc2d7 inset;
@@ -1316,7 +1316,7 @@ a.article-title:hover {
   color: #555;
 }
 #footer a {
-  color: #40759b;
+  color: #279ab9;
   text-decoration: none;
 }
 #footer a:hover {
@@ -1349,7 +1349,7 @@ a.article-title:hover {
   height: 54px;
   line-height: 54px;
   overflow: hidden;
-  color: #40759b;
+  color: #279ab9;
   text-align: center;
   text-decoration: none;
   font-weight: normal;
@@ -1459,7 +1459,7 @@ a.article-title:hover {
 .article-entry .gist {
   margin: 0 -20px;
   border-style: solid;
-  border-color: #63a4ba;
+  border-color: #52c4c8;
   border-width: 1px 0;
   background: #f1f8ff;
   padding: 15px 20px 15px 0;
@@ -1496,7 +1496,7 @@ a.article-title:hover {
   margin-left: 20px;
 }
 .article-entry .gist .gist-file .gist-meta a {
-  color: #40759b;
+  color: #279ab9;
   font-weight: normal;
 }
 .article-entry .gist .gist-file .gist-meta a:hover {
@@ -1616,7 +1616,7 @@ pre[class*="language-"].line-numbers > code {
   margin-top: 30px;
 }
 .widget-title .fa {
-  color: #40759b;
+  color: #279ab9;
 }
 .widget {
   color: #777;
@@ -1629,7 +1629,7 @@ pre[class*="language-"].line-numbers > code {
   overflow: hidden;
 }
 .widget a {
-  color: #40759b;
+  color: #279ab9;
   text-decoration: none;
 }
 .widget a:hover {

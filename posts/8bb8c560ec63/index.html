@@ -165,13 +165,15 @@
     </div>
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>使用Excel处理大量数据表单时，往往因数据量繁杂而无法快速准确锁定需要的数据。一个小tip可以让Excel选定单元格所在行和列颜色突出高亮显示，可以很方便找到数据了。</p>
-<p>需要用VBA实现这个功能，按ALT+F11调出vbe，双击左边你的表格，在右边代码窗口输入</p>
+        <p>使用Excel处理大量数据表单时，往往因数据量繁杂而无法快速准确锁定需要的数据。一个小Tip可以让Excel选定单元格所在行和列颜色突出高亮显示，可以很方便找到数据了。</p>
+<p>需要用VBA实现这个功能，按ALT+F11调出VBE（VB编辑器），双击左边你的表格，在右边代码窗口输入：</p>
+<span id="more"></span>
+
 <figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Worksheet_SelectionChange(<span class="keyword">ByVal</span> Target As Range)</span><br><span class="line">    Cells.Interior.ColorIndex = <span class="number">2</span>                     <span class="comment">&#x27;初始化背景颜色</span></span><br><span class="line">    Rows(Target.Row).Interior.ColorIndex = <span class="number">36</span>         <span class="comment">&#x27;设置选中的行颜色</span></span><br><span class="line">    Columns(Target.Column).Interior.ColorIndex = <span class="number">36</span>   <span class="comment">&#x27;设置选中的列颜色</span></span><br><span class="line">    Target.Cells.Interior.ColorIndex = <span class="number">2</span>              <span class="comment">&#x27;设置选中的单元格颜色</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
 <p>保存为启用宏的工作薄，方便打开。</p>
 <img src="/posts/8bb8c560ec63/colorIndex.jpg" class="" title="excel颜色代码">
 
-<p>常用颜色中文名对应ColorIndex编号<br>无色 &#x3D; -4142,<br>自动 &#x3D; -4105,<br>黑色 &#x3D; 1,<br>白色 &#x3D; 2，<br>红色 &#x3D; 3,<br>鲜绿 &#x3D; 4,<br>蓝色 &#x3D; 5,<br>黄色 &#x3D; 6,<br>粉红 &#x3D; 7,<br>青绿 &#x3D; 8,<br>深红 &#x3D; 9,<br>绿色 &#x3D; 10,<br>深蓝 &#x3D; 11,<br>深黄 &#x3D; 12,<br>紫罗兰 &#x3D; 13,<br>青色 &#x3D; 14,<br>灰色25 &#x3D; 15,<br>灰色50 &#x3D; 16,<br>天蓝 &#x3D; 33,<br>浅青绿 &#x3D; 34,<br>浅绿 &#x3D; 35,<br>浅黄 &#x3D; 36,<br>淡蓝 &#x3D; 37,<br>玫瑰红 &#x3D; 38,<br>淡紫 &#x3D; 39,<br>茶色 &#x3D; 40,<br>浅蓝 &#x3D; 41,<br>水绿色 &#x3D; 42,<br>酸橙色 &#x3D; 43,<br>金色 &#x3D; 44,<br>浅橙色 &#x3D; 45,<br>橙色 &#x3D; 46,<br>蓝灰 &#x3D; 47,<br>灰色40 &#x3D; 48,<br>深青 &#x3D; 49,<br>海绿 &#x3D; 50,<br>深绿 &#x3D; 51,<br>橄榄 &#x3D; 52,<br>褐色 &#x3D; 53,<br>梅红 &#x3D; 54,<br>靛蓝 &#x3D; 55,<br>灰色80 &#x3D; 56</p>
+<p>常用颜色中文名对应ColorIndex编号：<br>无色 &#x3D; -4142,<br>自动 &#x3D; -4105,<br>黑色 &#x3D; 1,<br>白色 &#x3D; 2，<br>红色 &#x3D; 3,<br>鲜绿 &#x3D; 4,<br>蓝色 &#x3D; 5,<br>黄色 &#x3D; 6,<br>粉红 &#x3D; 7,<br>青绿 &#x3D; 8,<br>深红 &#x3D; 9,<br>绿色 &#x3D; 10,<br>深蓝 &#x3D; 11,<br>深黄 &#x3D; 12,<br>紫罗兰 &#x3D; 13,<br>青色 &#x3D; 14,<br>灰色25 &#x3D; 15,<br>灰色50 &#x3D; 16,<br>天蓝 &#x3D; 33,<br>浅青绿 &#x3D; 34,<br>浅绿 &#x3D; 35,<br>浅黄 &#x3D; 36,<br>淡蓝 &#x3D; 37,<br>玫瑰红 &#x3D; 38,<br>淡紫 &#x3D; 39,<br>茶色 &#x3D; 40,<br>浅蓝 &#x3D; 41,<br>水绿色 &#x3D; 42,<br>酸橙色 &#x3D; 43,<br>金色 &#x3D; 44,<br>浅橙色 &#x3D; 45,<br>橙色 &#x3D; 46,<br>蓝灰 &#x3D; 47,<br>灰色40 &#x3D; 48,<br>深青 &#x3D; 49,<br>海绿 &#x3D; 50,<br>深绿 &#x3D; 51,<br>橄榄 &#x3D; 52,<br>褐色 &#x3D; 53,<br>梅红 &#x3D; 54,<br>靛蓝 &#x3D; 55,<br>灰色80 &#x3D; 56</p>
 
         
             <div id="toc-article">
