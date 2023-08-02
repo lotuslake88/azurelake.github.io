@@ -553,39 +553,18 @@
     </div>
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>使用Excel处理大量数据表单时，往往因数据量繁杂而无法快速准确锁定需要的数据。一个小tip可以让Excel选定单元格所在行和列颜色突出高亮显示，可以很方便找到数据了。</p>
-<p>需要用VBA实现这个功能，按ALT+F11调出vbe，双击左边你的表格，在右边代码窗口输入</p>
-<figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Worksheet_SelectionChange(<span class="keyword">ByVal</span> Target As Range)</span><br><span class="line">    Cells.Interior.ColorIndex = <span class="number">2</span>                     <span class="comment">&#x27;初始化背景颜色</span></span><br><span class="line">    Rows(Target.Row).Interior.ColorIndex = <span class="number">36</span>         <span class="comment">&#x27;设置选中的行颜色</span></span><br><span class="line">    Columns(Target.Column).Interior.ColorIndex = <span class="number">36</span>   <span class="comment">&#x27;设置选中的列颜色</span></span><br><span class="line">    Target.Cells.Interior.ColorIndex = <span class="number">2</span>              <span class="comment">&#x27;设置选中的单元格颜色</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
-<p>保存为启用宏的工作薄，方便打开。</p>
-<img src="/posts/8bb8c560ec63/colorIndex.jpg" class="" title="excel颜色代码">
-
-<p>常用颜色中文名对应ColorIndex编号<br>无色 &#x3D; -4142,<br>自动 &#x3D; -4105,<br>黑色 &#x3D; 1,<br>白色 &#x3D; 2，<br>红色 &#x3D; 3,<br>鲜绿 &#x3D; 4,<br>蓝色 &#x3D; 5,<br>黄色 &#x3D; 6,<br>粉红 &#x3D; 7,<br>青绿 &#x3D; 8,<br>深红 &#x3D; 9,<br>绿色 &#x3D; 10,<br>深蓝 &#x3D; 11,<br>深黄 &#x3D; 12,<br>紫罗兰 &#x3D; 13,<br>青色 &#x3D; 14,<br>灰色25 &#x3D; 15,<br>灰色50 &#x3D; 16,<br>天蓝 &#x3D; 33,<br>浅青绿 &#x3D; 34,<br>浅绿 &#x3D; 35,<br>浅黄 &#x3D; 36,<br>淡蓝 &#x3D; 37,<br>玫瑰红 &#x3D; 38,<br>淡紫 &#x3D; 39,<br>茶色 &#x3D; 40,<br>浅蓝 &#x3D; 41,<br>水绿色 &#x3D; 42,<br>酸橙色 &#x3D; 43,<br>金色 &#x3D; 44,<br>浅橙色 &#x3D; 45,<br>橙色 &#x3D; 46,<br>蓝灰 &#x3D; 47,<br>灰色40 &#x3D; 48,<br>深青 &#x3D; 49,<br>海绿 &#x3D; 50,<br>深绿 &#x3D; 51,<br>橄榄 &#x3D; 52,<br>褐色 &#x3D; 53,<br>梅红 &#x3D; 54,<br>靛蓝 &#x3D; 55,<br>灰色80 &#x3D; 56</p>
-
-        
-        
-          <blockquote id="copyright">
-              <p>本文链接: <a href="https://azurelake.cn/posts/8bb8c560ec63/">https://azurelake.cn/posts/8bb8c560ec63/</a></p>
-              <p>版权声明: 转载请注明出处(必须保留作者署名及链接)</p>
-          </blockquote>
-        
+        <p>使用Excel处理大量数据表单时，往往因数据量繁杂而无法快速准确锁定需要的数据。一个小Tip可以让Excel选定单元格所在行和列颜色突出高亮显示，可以很方便找到数据了。</p>
+<p>需要用VBA实现这个功能，按ALT+F11调出VBE（VB编辑器），双击左边你的表格，在右边代码窗口输入：</p>
       
     </div>
     <footer class="article-footer">
       
-        <div class="article-tag-wrap">
-          
-
-          
+        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Excel/" rel="tag">Excel</a></li></ul>
 
-          
-    <div class="social-share">
-      <span>分享到:</span>
-    </div>
-
-
-
-        </div>
+        <p class="article-more-link">
+          <a href="/posts/8bb8c560ec63/#more">Read More</a>
+        </p>
       
       
       
@@ -813,7 +792,7 @@
 <h2 id="2-验证密钥"><a href="#2-验证密钥" class="headerlink" title="2. 验证密钥"></a>2. 验证密钥</h2><p>密钥文件生成后，按github.com和coding.net设置要求，将id_rsa.pub中内容全选复制粘贴过去。coding.net中分账户和部署公钥两个类型，部署公钥默认拥有该项目的只读权限，如果需要获取推送权限，不要忘记勾选部署公钥设置里的「授予推送权限」。具体可以见官方<a target="_blank" rel="noopener" href="https://coding.net/help/doc/git/ssh-key.html">guideline</a>。首次SSH登录时，需要通过验证是否可以登录，加v可以方便查找出错原因。如出现successfully authenticated字样就代表成功了！</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -vT git@github.com</span><br></pre></td></tr></table></figure>
 
-<p>有多SSH隧道时，<a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;">&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;</a>应替换为Host别名，即上面的github1或github2。</p>
+<p>有多SSH隧道时，<a href="mailto:&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#109;</a>应替换为Host别名，即上面的github1或github2。</p>
 <p>验证密钥时，如果出现以下问题：</p>
 <blockquote>
 <p>Permissions 0644 for ‘~&#x2F;.ssh&#x2F;github_rsa’ are too open.  </p>
@@ -824,7 +803,7 @@
 
 <h2 id="3-双线Deploy"><a href="#3-双线Deploy" class="headerlink" title="3. 双线Deploy"></a>3. 双线Deploy</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: </span><br><span class="line">    github: git@github.com:usename/usename.git,master</span><br><span class="line">    coding: git@e.coding.net:usename/usename.git,master</span><br></pre></td></tr></table></figure>
 
-<p>Hexo同时deploy在Github和Coding时，_config.yml中添加以上字段，usename是具体账号名称。假设还有多个Github和Coding账号时，<a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#64;&#103;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;</a>和<a href="mailto:&#103;&#x69;&#x74;&#64;&#x65;&#46;&#99;&#111;&#x64;&#105;&#110;&#103;&#46;&#110;&#101;&#x74;">&#103;&#x69;&#x74;&#64;&#x65;&#46;&#99;&#111;&#x64;&#105;&#110;&#103;&#46;&#110;&#101;&#x74;</a>也应修改为Host别名。</p>
+<p>Hexo同时deploy在Github和Coding时，_config.yml中添加以上字段，usename是具体账号名称。假设还有多个Github和Coding账号时，<a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#46;&#99;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#46;&#99;&#111;&#x6d;</a>和<a href="mailto:&#103;&#105;&#x74;&#64;&#x65;&#x2e;&#x63;&#x6f;&#x64;&#x69;&#110;&#x67;&#x2e;&#x6e;&#101;&#x74;">&#103;&#105;&#x74;&#64;&#x65;&#x2e;&#x63;&#x6f;&#x64;&#x69;&#110;&#x67;&#x2e;&#x6e;&#101;&#x74;</a>也应修改为Host别名。</p>
 
         
         
