@@ -371,8 +371,8 @@ body {
 }
 @font-face {
   font-family: 'iconfont';
-  src: url("fonts/iconfont.eot?g7z171");
-  src: url("fonts/iconfont.eot?g7z171#iefix") format('embedded-opentype'), url("fonts/iconfont.ttf?g7z171") format('truetype'), url("fonts/iconfont.woff?g7z171") format('woff'), url("fonts/iconfont.svg?g7z171#iconfont") format('svg');
+  src: url("fonts/iconfont.eot?zf17rk");
+  src: url("fonts/iconfont.eot?zf17rk#iefix") format('embedded-opentype'), url("fonts/iconfont.ttf?zf17rk") format('truetype'), url("fonts/iconfont.woff?zf17rk") format('woff'), url("fonts/iconfont.svg?zf17rk#iconfont") format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -456,14 +456,14 @@ body {
 .fa-views:before {
   content: "\e00d";
 }
-.fa-info:before {
-  content: "\e017";
+.fa-navigation:before {
+  content: "\e019";
 }
 .fa-warning:before {
   content: "\e018";
 }
-.fa-navigation:before {
-  content: "\e019";
+.fa-info:before {
+  content: "\e017";
 }
 #header {
   -webkit-box-sizing: border-box;
