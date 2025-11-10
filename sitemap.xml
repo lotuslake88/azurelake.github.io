@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://azurelake.cn/posts/204d9b1ecbba/</loc>
+    <loc>https://azurelake.cn/posts/1a8d6e54f5b5/</loc>
     
     <lastmod>2024-09-21</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://azurelake.cn/posts/1a8d6e54f5b5/</loc>
+    <loc>https://azurelake.cn/posts/204d9b1ecbba/</loc>
     
     <lastmod>2024-09-21</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://azurelake.cn/posts/8bb8c560ec63/</loc>
+    <loc>https://azurelake.cn/posts/064ee797084f/</loc>
     
     <lastmod>2024-09-21</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://azurelake.cn/posts/064ee797084f/</loc>
+    <loc>https://azurelake.cn/posts/8bb8c560ec63/</loc>
     
     <lastmod>2024-09-21</lastmod>
     
@@ -146,15 +146,6 @@
   </url>
   
   <url>
-    <loc>https://azurelake.cn/posts/71d5e3d3fcd6/</loc>
-    
-    <lastmod>2024-09-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://azurelake.cn/posts/60ba715443f5/</loc>
     
     <lastmod>2024-09-21</lastmod>
@@ -165,6 +156,15 @@
   
   <url>
     <loc>https://azurelake.cn/posts/23aceb4f31cf/</loc>
+    
+    <lastmod>2024-09-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://azurelake.cn/posts/71d5e3d3fcd6/</loc>
     
     <lastmod>2024-09-21</lastmod>
     
@@ -293,28 +293,7 @@
   </url>
   
   <url>
-    <loc>https://azurelake.cn/tags/Aruba/</loc>
-    <lastmod>2025-11-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://azurelake.cn/tags/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2025-11-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://azurelake.cn/tags/%E5%95%86%E5%8A%A1%E5%86%99%E4%BD%9C/</loc>
-    <lastmod>2025-11-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://azurelake.cn/tags/%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E/</loc>
     <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -335,7 +314,28 @@
   </url>
   
   <url>
+    <loc>https://azurelake.cn/tags/Aruba/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://azurelake.cn/tags/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://azurelake.cn/tags/Clang/</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://azurelake.cn/tags/%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E/</loc>
     <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -349,14 +349,14 @@
   </url>
   
   <url>
-    <loc>https://azurelake.cn/tags/%E8%81%8C%E4%B8%9A%E8%AF%84%E4%BC%B0/</loc>
+    <loc>https://azurelake.cn/tags/%E4%BA%BA%E7%94%9F%E5%8A%B1%E5%BF%97/</loc>
     <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://azurelake.cn/tags/%E4%BA%BA%E7%94%9F%E5%8A%B1%E5%BF%97/</loc>
+    <loc>https://azurelake.cn/tags/%E8%81%8C%E4%B8%9A%E8%AF%84%E4%BC%B0/</loc>
     <lastmod>2025-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

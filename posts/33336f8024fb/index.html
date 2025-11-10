@@ -177,7 +177,7 @@
 <h2 id="2-验证密钥"><a href="#2-验证密钥" class="headerlink" title="2. 验证密钥"></a>2. 验证密钥</h2><p>密钥文件生成后，按github.com和coding.net设置要求，将id_rsa.pub中内容全选复制粘贴过去。coding.net中分账户和部署公钥两个类型，部署公钥默认拥有该项目的只读权限，如果需要获取推送权限，不要忘记勾选部署公钥设置里的「授予推送权限」。具体可以见官方<a target="_blank" rel="noopener" href="https://coding.net/help/doc/git/ssh-key.html">guideline</a>。首次SSH登录时，需要通过验证是否可以登录，加v可以方便查找出错原因。如出现successfully authenticated字样就代表成功了！</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -vT git@github.com</span><br></pre></td></tr></table></figure>
 
-<p>有多SSH隧道时，<a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;</a>应替换为Host别名，即上面的github1或github2。</p>
+<p>有多SSH隧道时，<a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;</a>应替换为Host别名，即上面的github1或github2。</p>
 <p>验证密钥时，如果出现以下问题：</p>
 <blockquote>
 <p>Permissions 0644 for ‘~&#x2F;.ssh&#x2F;github_rsa’ are too open.  </p>
@@ -188,7 +188,7 @@
 
 <h2 id="3-双线Deploy"><a href="#3-双线Deploy" class="headerlink" title="3. 双线Deploy"></a>3. 双线Deploy</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: </span><br><span class="line">    github: git@github.com:usename/usename.git,master</span><br><span class="line">    coding: git@e.coding.net:usename/usename.git,master</span><br></pre></td></tr></table></figure>
 
-<p>Hexo同时deploy在Github和Coding时，_config.yml中添加以上字段，usename是具体账号名称。假设还有多个Github和Coding账号时，<a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;</a>和<a href="mailto:&#103;&#105;&#x74;&#x40;&#x65;&#x2e;&#99;&#x6f;&#x64;&#105;&#110;&#103;&#x2e;&#110;&#x65;&#116;">&#103;&#105;&#x74;&#x40;&#x65;&#x2e;&#99;&#x6f;&#x64;&#105;&#110;&#103;&#x2e;&#110;&#x65;&#116;</a>也应修改为Host别名。</p>
+<p>Hexo同时deploy在Github和Coding时，_config.yml中添加以上字段，usename是具体账号名称。假设还有多个Github和Coding账号时，<a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#109;</a>和<a href="mailto:&#103;&#x69;&#x74;&#64;&#x65;&#x2e;&#x63;&#111;&#100;&#105;&#110;&#103;&#46;&#110;&#x65;&#x74;">&#103;&#x69;&#x74;&#64;&#x65;&#x2e;&#x63;&#111;&#100;&#105;&#110;&#103;&#46;&#110;&#x65;&#x74;</a>也应修改为Host别名。</p>
 
         
             <div id="toc-article">
@@ -390,7 +390,7 @@
           <i id="busuanzi_container_site_uv"><i id="busuanzi_value_site_uv"></i></i>人，本站总访问量：
           <i class="fa fa-views"></i>
           <i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次
-          <span> | Copyright &copy; 2025 Matrix</span>
+          <span> | Copyright &copy; 2025 matriX</span>
         </p>
       
     </div>
