@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html itemscope lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+  
+<!-- Clarity tracking code for https://azurelake.cn/ -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "i0iexte0co");
+</script>
+
+  
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+  
+  <title>思科交换机被入侵了嘛？ | 沧浪湖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <meta name="description" content="沧浪&#39;s Blog，沧浪之水清兮，可以濯我缨；沧浪之水浊兮，可以濯我足。">
+  
+  
+    <meta name="keywords" content="沧浪湖,azurelake,C++,Git,CMake,Clang,Aruba,人生励志,育儿">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="沧浪湖" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/localshare/css/share.css">
+
+  
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <p id="logo-wrap">
+        <a href="/" id="logo">沧浪湖</a>
+      </p>
+		
+		<span id="subtitle"></span>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+		<script>
+			var typed = new Typed("#subtitle", {
+				strings: ['沧浪之水清兮，可以濯我缨；沧浪之水浊兮，可以濯我足',''],
+				startDelay: 300,
+				typeSpeed: 200,
+				loop: true,
+				backSpeed: 100,
+				showCursor: true
+			});
+		</script>
+		
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/."><i class="fa fa-home"></i> 首页</a>
+        
+          <a class="main-nav-link" href="/archives/"><i class="fa fa-archive"></i> 存档</a>
+        
+          <a class="main-nav-link" href="/about/"><i class="fa fa-user"></i> 关于</a>
+        
+          <a class="main-nav-link" href="/atom.xml"><i class="fa fa-rss"></i> 订阅</a>
+        
+      </nav>
+    </div>
+    <div id="search-form">
+      <div id="result-mask" class="hide"></div>
+      <label><input id="search-key" type="text" autocomplete="off" placeholder="站内搜索"></label>
+      <div id="result-wrap" class="hide">
+        <div id="search-result"></div>
+      </div>
+      <div class="hide">
+        <template id="search-tpl">
+          <div class="item">
+            <a href="/{path}" title="{title}">
+              <div class="title">{title}</div>
+              <div class="time">{date}</div>
+              <div class="tags">{tags}</div>
+            </a>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-cisco-switches-vulnerabilities" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      思科交换机被入侵了嘛？
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2023-07-02T05:25:43.000Z" itemprop="datePublished">2023年07月02日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+  </div>
+
+      
+        <span class="article-views">
+  <i class="fa fa-views"></i>
+  <i id="busuanzi_container_page_pv">
+      <i id="busuanzi_value_page_pv"></i>
+  </i>
+</span>
+
+      
+      
+<a href="/posts/7527f9b9dd8d/#comments" class="article-comment-link">
+  
+    
+    
+    
+    
+    
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>6月28日晚上，发现Nas在18点28分时有不正常重启记录，但检查Nas的<code>/var/log/message</code>、<code>/var/log/cron </code>等文件，又没有什么异常。看进程、网络也没有什么异常，不过心里还是忐忑不安，毕竟现在网络安全漏洞太多，稍有不甚，就可能被攻击了。</p>
+<p>7月2日，登录思科交换机发现，截至6月28日18点31分起，以前日志全部被清理，难道是思科交换机有安全漏洞，导致Nas受牵连了？上网搜索<code>思科交换机 安全漏洞 CVE-2023</code>，果不其然，今年四月份，思科多款 Small Business 系列交换机中存在四个严重的远程代码执行漏洞，且利用代码已遭公开。</p>
+<span id="more"></span>
+
+<blockquote>
+<p>这四个漏洞的 CVSS 评分为9.8分，如遭成功利用可导致未认证的攻击者以根权限在受攻陷设备上执行任意代码。这些漏洞的CVE漏洞编号是CVE-2023-20159、CVE-2023-20160、CVE-2023-20161和CVE-2023-20189，均由对目标交换机 web 接口发送的请求验证不当引发。</p>
+<p>攻击者可在复杂度低下的攻击中，利用目标设备 web 用户接口发送特殊构造的请求，利用这些漏洞。思科解释称，“这些漏洞之间不存在相互依赖关系。利用其中一个漏洞时无需利用其它漏洞。另外，受其中一个漏洞影响的软件发布可能不会受其它漏洞的影响。”</p>
+<p>受影响的思科交换机包括：</p>
+<p>250 Series Smart Switches、350 Series Managed Switches、350X Series Stackable Managed Switches和550X Series Stackable Managed Switches （已在固件版本2.5.9.16中修复）</p>
+<p>Business 250 Series Smart Switches 和 Business 350 Series Managed Switches（已在固件版本3.3.0.16中修复）</p>
+<p>Small Business 200 Series Smart Switches、Small Business 300 Series Managed Switches、Small Business 500 Series Stackable Managed Switches（无补丁）</p>
+<p>思科表示，200、300以及500系列的 Small Business 交换机固件将不会得到补丁，因为这些设备已经进入生命周期末期。</p>
+<p>思科产品安全事件响应团队 (PSIRT) 还披露称，这些漏洞的 PoC 代码已存在，可导致攻击者活跃利用。本周三，思科提醒称，PSIRT发现这些漏洞的“PoC 利用代码已存在”，可导致攻击者攻击暴露到远程访问的易受攻击设备。不过，幸运的是，思科尚未发现漏洞遭利用的迹象。</p>
+<p>思科还在着手修复位于 Prime Collaboration Deployment (PCD) 服务器管理工具中的一个 XSS 漏洞。该漏洞由北约网络安全中心研究员 Pierre Vivegnis 发现。</p>
+<p>美国、英国和思科公司最近联合发布安全公告提醒称，俄罗斯军队黑客组织 APT28 已在思科 IOS 路由器上部署自定义 “Jaguar Tooth（美洲虎牙齿）”，获得对受陷设备的未认证访问权限。</p>
+</blockquote>
+<p>思科交换机新固件版本在今年四月中旬就已经发布了，可惜我没有看到。按正常情况，交换机会完整保存网络连接情况，以及设备操作记录，但在这两个很近时间段，日志被无故清除，思科交换机大概率被入侵过。另外检查路由器情况，发现路由器防火墙近期有6个恶意连接拦截。</p>
+<p>情况不妙呀！！！</p>
+<p>新版固件下载后，三下五除二，更新升级完思科交换机。但是又觉得不可靠，为了安全起见，将思科交换机重置，来一次彻底更新升级固件，登录密码重新设置一遍，希望没有隐藏的后门在里面。</p>
+
+        
+            <div id="toc-article">
+                
+  <div class="widget-wrap" id="toc-wrap">
+    <h3 class="widget-title"><i class="fa fa-toc"></i> 文章目录</h3>
+    <div class="widget">
+      
+    </div>
+  </div>
+
+
+            </div>
+        
+        
+          <blockquote id="copyright">
+              <p>本文链接: <a href="https://azurelake.cn/posts/7527f9b9dd8d/">https://azurelake.cn/posts/7527f9b9dd8d/</a></p>
+              <p>版权声明: 转载请注明出处(必须保留作者署名及链接)</p>
+          </blockquote>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E/" rel="tag">安全漏洞</a></li></ul>
+
+          
+    <div class="social-share">
+      <span>分享到:</span>
+    </div>
+
+
+
+        </div>
+      
+      
+        
+<nav id="article-nav">
+  
+    <a href="/posts/bacfc96f3e1b/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <div class="article-nav-title">
+        
+          C++20 Modules 尝鲜 Ⅱ
+        
+      </div>
+    </a>
+  
+  
+    <a href="/posts/2f7824f8c458/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <div class="article-nav-title">
+        
+          七岁以下儿童生长标准
+        
+      </div>
+    </a>
+  
+</nav>
+
+      
+      
+        
+
+
+
+
+
+
+
+
+      
+    </footer>
+  </div>
+</article>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-posts"></i> 最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/posts/23aceb4f31cf/">植物大战僵尸2之潘妮课堂</a>
+          </li>
+        
+          <li>
+            <a href="/posts/92ca3251dd02/">Top 10 lazy email habits 使用电子邮件的十大懒习</a>
+          </li>
+        
+          <li>
+            <a href="/posts/60ba715443f5/">有关“沧浪”的古诗词</a>
+          </li>
+        
+          <li>
+            <a href="/posts/22516cb819d9/">腾讯，请停止你的无端污名化！</a>
+          </li>
+        
+          <li>
+            <a href="/posts/71d5e3d3fcd6/">水龙头维修记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-tag"></i> 标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Aruba/" style="font-size: 10px;">Aruba</a> <a href="/tags/Bing/" style="font-size: 10px;">Bing</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/CMake/" style="font-size: 10px;">CMake</a> <a href="/tags/Clang/" style="font-size: 10px;">Clang</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/%E4%BA%BA%E7%94%9F%E5%8A%B1%E5%BF%97/" style="font-size: 20px;">人生励志</a> <a href="/tags/%E5%84%BF%E7%AB%A5%E7%94%9F%E9%95%BF%E5%8F%91%E8%82%B2/" style="font-size: 20px;">儿童生长发育</a> <a href="/tags/%E5%95%86%E5%8A%A1%E5%86%99%E4%BD%9C/" style="font-size: 20px;">商务写作</a> <a href="/tags/%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E/" style="font-size: 10px;">安全漏洞</a> <a href="/tags/%E6%89%A7%E8%A1%8C%E5%8A%9B/" style="font-size: 10px;">执行力</a> <a href="/tags/%E7%AE%B4%E8%A8%80/" style="font-size: 20px;">箴言</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">网络技术</a> <a href="/tags/%E8%81%8C%E4%B8%9A%E8%AF%84%E4%BC%B0/" style="font-size: 10px;">职业评估</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-classify"></i> 文章分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%88%90%E5%8A%9F%E5%AD%A6/">成功学</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E6%96%87%E7%AC%94%E6%9C%AD/">杂文笔札</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%B2%E5%84%BF/">育儿</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a><span class="category-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-archive"></i> 存档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024年</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023年</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022年</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021年</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020年</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年</a><span class="archive-list-count">10</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-tag"></i> 文章标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Aruba/" rel="tag">Aruba</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bing/" rel="tag">Bing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CMake/" rel="tag">CMake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Clang/" rel="tag">Clang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/" rel="tag">Excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%94%9F%E5%8A%B1%E5%BF%97/" rel="tag">人生励志</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%84%BF%E7%AB%A5%E7%94%9F%E9%95%BF%E5%8F%91%E8%82%B2/" rel="tag">儿童生长发育</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%95%86%E5%8A%A1%E5%86%99%E4%BD%9C/" rel="tag">商务写作</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E/" rel="tag">安全漏洞</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%A7%E8%A1%8C%E5%8A%9B/" rel="tag">执行力</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%B4%E8%A8%80/" rel="tag">箴言</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" rel="tag">网络技术</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E4%B8%9A%E8%AF%84%E4%BC%B0/" rel="tag">职业评估</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-link"></i> 友情链接</h3>
+    <div class="widget">
+      <ul>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://finisky.github.io/">Finisky Garden</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://dusays.com/">杜老师说</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://www.iszy.cc/">随遇而安</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://zyyyyy.com/">禅茶一味</a>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <a id="totop" href="#top"></a>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <p>
+        <a href="/sitemap.xml">网站地图</a>
+        <span> | </span><a href="/atom.xml">订阅本站</a>
+        <span> | </span><a href="/about/">联系博主</a>       
+      </p>
+      
+        <p>本站总访客数：
+          <i class="fa fa-visitors"></i>
+          <i id="busuanzi_container_site_uv"><i id="busuanzi_value_site_uv"></i></i>人，本站总访问量：
+          <i class="fa fa-views"></i>
+          <i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次
+          <span> | Copyright &copy; 2025 Matrix</span>
+        </p>
+      
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+  </div>
+  
+<script src="/js/search.json.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+  
+<script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 复制添加版权信息 -->
+<script>
+    var selfLogin = false;
+    var follow = $('#profile_block').find('#p_b_follow');
+    var block = follow.length >= 1 ? follow[0] : "";
+    var followText = (block != null && block != undefined) ? block.innerHTML : "";
+    if(followText == "") selfLogin = true;
+ 
+    var pageInfo = '\r\n---------------------\r\n'
+        + '© 版权声明：著作权归作者所有，商业转载请联系作者获得授权，非商业转载请注明出处。\r\n'
+        + '作者：Matrix\r\n源地址：' + document.location.href
+        + '\r\n来源：沧浪湖，转载请附上博文链接！';
+ 
+    document.addEventListener('copy', function (ev) {
+        var targetHTML = $.trim($(ev.target).html());
+        // console.log("targetHTML:" + targetHTML)
+        if (targetHTML == "") return;
+        if (!(targetHTML.startsWith('<table class="hljs-ln"') && targetHTML.endsWith('</table>')) || !selfLogin)  // isLogined
+        {
+            var selected = window.getSelection();
+            var selectedText = selected.toString();  
+            let copyRightStr = (selectedText + pageInfo).replace(/\n/g, '\r\n'); // Solve the line breaks conversion issue
+ 
+            ev.clipboardData.setData('text/plain', `${copyRightStr}`);
+            ev.preventDefault();
+        }
+    });
+</script>
+
+
+
+
+  
+    
+<script src="/localshare/js/social-share.js"></script>
+
+    
+<script src="/localshare/js/qrcode.js"></script>
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+
+</body>
+</html>

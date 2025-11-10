@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html itemscope lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+  
+<!-- Clarity tracking code for https://azurelake.cn/ -->
+<script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "i0iexte0co");
+</script>
+
+  
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+  
+  <title>沧浪湖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <meta name="description" content="沧浪&#39;s Blog，沧浪之水清兮，可以濯我缨；沧浪之水浊兮，可以濯我足。">
+  
+  
+    <meta name="keywords" content="沧浪湖,azurelake,C++,Git,CMake,Clang,Aruba,人生励志,育儿">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="沧浪湖" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/localshare/css/share.css">
+
+  
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <p id="logo-wrap">
+        <a href="/" id="logo">沧浪湖</a>
+      </p>
+		
+		<span id="subtitle"></span>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+		<script>
+			var typed = new Typed("#subtitle", {
+				strings: ['沧浪之水清兮，可以濯我缨；沧浪之水浊兮，可以濯我足',''],
+				startDelay: 300,
+				typeSpeed: 200,
+				loop: true,
+				backSpeed: 100,
+				showCursor: true
+			});
+		</script>
+		
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/."><i class="fa fa-home"></i> 首页</a>
+        
+          <a class="main-nav-link" href="/archives/"><i class="fa fa-archive"></i> 存档</a>
+        
+          <a class="main-nav-link" href="/about/"><i class="fa fa-user"></i> 关于</a>
+        
+          <a class="main-nav-link" href="/atom.xml"><i class="fa fa-rss"></i> 订阅</a>
+        
+      </nav>
+    </div>
+    <div id="search-form">
+      <div id="result-mask" class="hide"></div>
+      <label><input id="search-key" type="text" autocomplete="off" placeholder="站内搜索"></label>
+      <div id="result-wrap" class="hide">
+        <div id="search-result"></div>
+      </div>
+      <div class="hide">
+        <template id="search-tpl">
+          <div class="item">
+            <a href="/{path}" title="{title}">
+              <div class="title">{title}</div>
+              <div class="time">{date}</div>
+              <div class="tags">{tags}</div>
+            </a>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  <article id="post-新的互联网围墙" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="p-name article-title" href="/posts/d91a7ac5b9b4/">新的互联网围墙</a>
+    </h2>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2019-08-15T00:42:55.000Z" itemprop="datePublished">2019年08月15日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+  </div>
+
+      
+      
+<a href="/posts/d91a7ac5b9b4/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>最近想让搜索引擎收录下Blog，发现事情并不是那么简单了。百度依然占居国内最大搜索市场，你会发现其搜索结果排前列的，绝大部分内容是百度自己的服务如百家号、百度百科、百度贴吧等。互联网看来是互通，但搜索引擎却将将它变成另外一个围墙了。</p>
+<p>在百度提交网站首页URL后，一直没有消息。考虑百度信息垄断，搜索流量都引入自己服务，决定考虑另外一个搜索引擎，查询国内PC端搜索引擎市场占有率排名如下：</p>
+<blockquote>
+<p>百度：58.67%<br>360搜索：25.88%<br>谷歌：5.26%<br>搜狗：4.42%<br>必应：4.28%</p>
+</blockquote>
+<p>对排名第二的360一直没有好印象，几乎没用过其产品，直接PASS；谷歌一直被墙，找梯子太麻烦，有插件生成其sitemap，也不考虑了；搜狗直接无视；最后只剩下微软的必应，知道其偶尔也会被墙，决定还是试试看。</p>
+<p>通过<a target="_blank" rel="noopener" href="http://www.cn.bing.com/webmaster">www.cn.bing.com/webmaster</a>  ，可以选择微软、google、facebook账号登录。</p>
+<p>登录后，添加网站URL。注意了，千万不要使用https，否则会影响后面的验证。添加网站URL时可以顺便添加网站sitemap，Bing的 Sitemap feed(s)支持如下格式： <a target="_blank" rel="noopener" href="http://www.sitemaps.org/protocol.html">Sitemap</a> 、RSS 2.0、Atom 0.3、Atom 1.0 和文本文件。</p>
+<p>接下来，共有三种验证方法：</p>
+<blockquote>
+<p>1.将 XML 文件放在网络服务器上<br>2.复制 <meta> 标记并在默认网页上粘贴<br>3.手动向 DNS 添加 CNAME 记录</p>
+</blockquote>
+<p>一般选择第一种验证，简单与方便。记住网站URL不要使用https，否则无法通过验证。</p>
+<p>添加sitemaps后，一般三天左右，使用“site:添加的域名”就可以搜索了。对于一些重要页面，为了增加Bing收录时效性，可以通过“提交 URL”，基本上当天提交，当天就可搜索到。</p>
+<p>后补：由于关联熊掌ID需要手持身份证照片，没有关联之，多次提交网站首页URL后，百度仍没有收录。最近看了一则长沙的新闻，才明白咋回事，原来是第八十六条的原因。</p>
+
+        
+        
+          <blockquote id="copyright">
+              <p>本文链接: <a href="https://azurelake.cn/posts/d91a7ac5b9b4/">https://azurelake.cn/posts/d91a7ac5b9b4/</a></p>
+              <p>版权声明: 转载请注明出处(必须保留作者署名及链接)</p>
+          </blockquote>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bing/" rel="tag">Bing</a></li></ul>
+
+          
+    <div class="social-share">
+      <span>分享到:</span>
+    </div>
+
+
+
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
+  <article id="post-使用SSH方式实现Git远程连接" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="p-name article-title" href="/posts/33336f8024fb/">在Git远程连接中配置SSH</a>
+    </h2>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2019-08-12T07:56:14.000Z" itemprop="datePublished">2019年08月12日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+  </div>
+
+      
+      
+<a href="/posts/33336f8024fb/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>最近同时在使用Github和Coding，两者都支持Git仓库。而Git是目前世界上最先进的分布式版本控制系统，相较于SVN，分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作！当有网络的时候，再把本地提交推送一下就完成同步了，非常方便，Git得到了众多IT开发平台和工作者的青睐！</p>
+<p>Linux上使用Git，在各发行版本中非常方便。Windows上使用Git，需要从<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git官网</a>直接下载（网速慢的可以去国内镜像或者迅雷下载），然后按默认选项安装即可。我选择的是<strong>Portable</strong>版本，需要自己设置环境变量，将git的位置添加到PATH 中即可。PortableGit中有两个可执行文件：git-bash.exe和git-cmd.exe，看名字就知道怎么回事了。建议使用git-bash，可记录命令历史。关于Git的具体命令使用，这里就不再赘述了。</p>
+<h2 id="1-生成密钥文件"><a href="#1-生成密钥文件" class="headerlink" title="1. 生成密钥文件"></a>1. 生成密钥文件</h2><p>连续三次回车（即不做任何输入），email地址可以虚拟。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;yourmail@email.com&quot;</span> [-f ~/.ssh/name-rsa]</span><br></pre></td></tr></table></figure>
+<p>注意了，~在win10上一般指“C:\Users\你的用户名“这个文件夹，假如你没有自定义用户文件夹。[ ]中内容代表你可以自定义密钥生成位置及名称。默认不需要，如果你要生成多个密钥文件时，为了避免覆盖，可以添加此参数。</p>
+<p>在~&#x2F;.ssh中会看到生成的id_rsa.pub和id_rsa文件。Github and Coding双线部署，需在~&#x2F;.ssh中新建config文件，其内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">	HostName ssh.github.com</span><br><span class="line">	User git</span><br><span class="line">	PreferredAuthentications publickey</span><br><span class="line">	IdentityFile ~/.ssh/github_rsa</span><br><span class="line">	Port 22</span><br><span class="line">	</span><br><span class="line">Host coding.net</span><br><span class="line">	HostName e.coding.net</span><br><span class="line">	User git</span><br><span class="line">	PreferredAuthentications publickey</span><br><span class="line">	IdentityFile ~/.ssh/coding_rsa</span><br><span class="line">	Port 22</span><br></pre></td></tr></table></figure>
+
+<p>Host后面的别名是为了区分不同SSH隧道，假设你有两个不同github.com账号，Host可分别设置为github1和github2。</p>
+<h2 id="2-验证密钥"><a href="#2-验证密钥" class="headerlink" title="2. 验证密钥"></a>2. 验证密钥</h2><p>密钥文件生成后，按github.com和coding.net设置要求，将id_rsa.pub中内容全选复制粘贴过去。coding.net中分账户和部署公钥两个类型，部署公钥默认拥有该项目的只读权限，如果需要获取推送权限，不要忘记勾选部署公钥设置里的「授予推送权限」。具体可以见官方<a target="_blank" rel="noopener" href="https://coding.net/help/doc/git/ssh-key.html">guideline</a>。首次SSH登录时，需要通过验证是否可以登录，加v可以方便查找出错原因。如出现successfully authenticated字样就代表成功了！</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -vT git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>有多SSH隧道时，<a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;</a>应替换为Host别名，即上面的github1或github2。</p>
+<p>验证密钥时，如果出现以下问题：</p>
+<blockquote>
+<p>Permissions 0644 for ‘~&#x2F;.ssh&#x2F;github_rsa’ are too open.  </p>
+<p>It is required that your private key files are NOT accessible by others.</p>
+</blockquote>
+<p>说明系统认为这个文件的权限太大了，容易泄密，只需要改变文件权限即可。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> 600 github_rsa</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-双线Deploy"><a href="#3-双线Deploy" class="headerlink" title="3. 双线Deploy"></a>3. 双线Deploy</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: </span><br><span class="line">    github: git@github.com:usename/usename.git,master</span><br><span class="line">    coding: git@e.coding.net:usename/usename.git,master</span><br></pre></td></tr></table></figure>
+
+<p>Hexo同时deploy在Github和Coding时，_config.yml中添加以上字段，usename是具体账号名称。假设还有多个Github和Coding账号时，<a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;</a>和<a href="mailto:&#103;&#105;&#x74;&#x40;&#x65;&#x2e;&#99;&#x6f;&#x64;&#105;&#110;&#103;&#x2e;&#110;&#x65;&#116;">&#103;&#105;&#x74;&#x40;&#x65;&#x2e;&#99;&#x6f;&#x64;&#105;&#110;&#103;&#x2e;&#110;&#x65;&#116;</a>也应修改为Host别名。</p>
+
+        
+        
+          <blockquote id="copyright">
+              <p>本文链接: <a href="https://azurelake.cn/posts/33336f8024fb/">https://azurelake.cn/posts/33336f8024fb/</a></p>
+              <p>版权声明: 转载请注明出处(必须保留作者署名及链接)</p>
+          </blockquote>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSH/" rel="tag">SSH</a></li></ul>
+
+          
+    <div class="social-share">
+      <span>分享到:</span>
+    </div>
+
+
+
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
+  <article id="post-swim" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="p-name article-title" href="/posts/1c01682dddd4/">Swim</a>
+    </h2>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2019-08-11T09:11:39.000Z" itemprop="datePublished">2019年08月11日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/%E6%9D%82%E6%96%87%E7%AC%94%E6%9C%AD/">杂文笔札</a>
+  </div>
+
+      
+      
+<a href="/posts/1c01682dddd4/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>今日，细雨绵绵，拖延到下午3点半，最终还是去泳池了。在这个尴尬的年龄，游泳是性价比不错的运动了。室内游泳不会受伤，想游就游，不想游就当泡澡，不受天气环境影响，水下耳边咕咚咕咚的声音还会让自己静下心来。</p>
+<p>一直以来，自己缺乏锻炼，没有养成运动的好习惯，身体健康越来越差。坚持游泳是自己19年定的目标，尴尬的年龄其他目标无法实现，简单的都无法坚持就不要做白日梦了。坚持~ ~ ~</p>
+
+        
+        
+          <blockquote id="copyright">
+              <p>本文链接: <a href="https://azurelake.cn/posts/1c01682dddd4/">https://azurelake.cn/posts/1c01682dddd4/</a></p>
+              <p>版权声明: 转载请注明出处(必须保留作者署名及链接)</p>
+          </blockquote>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+          
+    <div class="social-share">
+      <span>分享到:</span>
+    </div>
+
+
+
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
+  <article id="post-新版儿童生长发育参照标准" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="p-name article-title" href="/posts/18a18ee0a80d/">新版儿童生长发育参照标准</a>
+    </h2>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2019-08-07T08:59:53.000Z" itemprop="datePublished">2019年08月07日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/%E8%82%B2%E5%84%BF/">育儿</a>
+  </div>
+
+      
+      
+<a href="/posts/18a18ee0a80d/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>最新版中国儿童生长发育参照标准，为您提供0-10岁宝宝的身高（长）体重标准数据，帮助您科学监控宝宝的体格发育情况，保障宝宝的营养及健康状况良好。</p>
+<p>宝爸宝妈们，快快查询对比下最新版中国儿童的身高（长）与体重标准比例，看看自己宝宝的生长发育情况~ ~ ~</p>
+<p><em><strong>ps：手机请横屏查看</strong></em></p>
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%84%BF%E7%AB%A5%E7%94%9F%E9%95%BF%E5%8F%91%E8%82%B2/" rel="tag">儿童生长发育</a></li></ul>
+
+        <p class="article-more-link">
+          <a href="/posts/18a18ee0a80d/#more">Read More</a>
+        </p>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
+  <article id="post-个人职业评估" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="p-name article-title" href="/posts/17c744e65a8d/">个人职业评估</a>
+    </h2>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2019-08-05T03:18:19.000Z" itemprop="datePublished">2019年08月05日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/%E6%88%90%E5%8A%9F%E5%AD%A6/">成功学</a>
+  </div>
+
+      
+      
+<a href="/posts/17c744e65a8d/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>个人职业评估四个维度，星级评估适合绝大部分人，个人可以根据自身岗位或专业调整适合自己的星级。</p>
+<ul>
+<li><p><strong>素质</strong><br>个人基础值，固有属性并受周边环境影响而变化</p>
+<blockquote>
+<p>意愿&#x2F;动机	★★★☆☆<br>习惯		★★★★☆<br>价值观		★★☆☆☆<br>性格类型&#x2F;特征	★★★★☆<br>智商		★★★★☆</p>
+</blockquote>
+</li>
+<li><p><strong>能力</strong><br>能力就像武功绝招，拥有将出类拔萃</p>
+<blockquote>
+<p>观察能力		★★★☆☆<br>结构化思维能力	★★★★★<br>知识获取、整合与创新	★★★★☆<br>沟通表达能力	★★★★☆<br>人际人脉经营能力		★★★★☆<br>团队领导力		★★★☆☆</p>
+</blockquote>
+</li>
+<li><p><strong>知识</strong><br>知识盲区会引发目标偏离</p>
+<blockquote>
+<p>专业知识		★★★★☆<br>行业知识		★★★★☆<br>法律和财务知识	★★☆☆☆</p>
+</blockquote>
+</li>
+<li><p><strong>技能</strong><br>技能熟练程度影响产出效率</p>
+<blockquote>
+<p>PM技能			★★★☆☆<br>Office技能		★★☆☆☆<br>外语技能		★★★☆☆</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>以上四个评估维度中未考虑健康因素，健康基础素质及健康管理能力都会影响个人的职业生涯，身体是革命的本钱就是这个意喻。</strong></p>
+
+        
+        
+          <blockquote id="copyright">
+              <p>本文链接: <a href="https://azurelake.cn/posts/17c744e65a8d/">https://azurelake.cn/posts/17c744e65a8d/</a></p>
+              <p>版权声明: 转载请注明出处(必须保留作者署名及链接)</p>
+          </blockquote>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%81%8C%E4%B8%9A%E8%AF%84%E4%BC%B0/" rel="tag">职业评估</a></li></ul>
+
+          
+    <div class="social-share">
+      <span>分享到:</span>
+    </div>
+
+
+
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
+  <article id="post-简洁人生建议" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="p-name article-title" href="/posts/fcf09fc22fb0/">简洁人生箴言</a>
+    </h2>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2019-08-02T00:44:30.000Z" itemprop="datePublished">2019年08月02日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/%E6%88%90%E5%8A%9F%E5%AD%A6/">成功学</a>
+  </div>
+
+      
+      
+<a href="/posts/fcf09fc22fb0/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><strong>终身学习，不要止步不前</strong><br>时代抛弃你的时候，都不会和你说声再见。不进步，其实就是最大的退步。鼓足干劲向前奔跑，不是为了改变世界而是为了不被世界抛弃。</li>
+</ul>
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%BA%E7%94%9F%E5%8A%B1%E5%BF%97/" rel="tag">人生励志</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%B4%E8%A8%80/" rel="tag">箴言</a></li></ul>
+
+        <p class="article-more-link">
+          <a href="/posts/fcf09fc22fb0/#more">Read More</a>
+        </p>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
+  <article id="post-Github分支管理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="p-name article-title" href="/posts/8420bea7227f/">Github分支管理</a>
+    </h2>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2019-07-29T00:10:26.000Z" itemprop="datePublished">2019年07月29日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+  </div>
+
+      
+      
+<a href="/posts/8420bea7227f/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="1、分支查看"><a href="#1、分支查看" class="headerlink" title="1、分支查看"></a>1、分支查看</h2><h3 id="1-1-本地分支查看"><a href="#1-1-本地分支查看" class="headerlink" title="1.1 本地分支查看"></a>1.1 本地分支查看</h3><p>使用 git branch命令，如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+
+<p>*<strong>标识的是你当前所在的分支。</strong></p>
+<h3 id="1-2-远程分支查看"><a href="#1-2-远程分支查看" class="headerlink" title="1.2 远程分支查看"></a>1.2 远程分支查看</h3><p>命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -r</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-查看所有分支"><a href="#1-3-查看所有分支" class="headerlink" title="1.3 查看所有分支"></a>1.3 查看所有分支</h3><p>命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、分支创建与切换"><a href="#2、分支创建与切换" class="headerlink" title="2、分支创建与切换"></a>2、分支创建与切换</h2><h3 id="2-1-创建本地新分支"><a href="#2-1-创建本地新分支" class="headerlink" title="2.1 创建本地新分支"></a>2.1 创建本地新分支</h3><p>命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch [branch name]</span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch published</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-切换到新分支"><a href="#2-2-切换到新分支" class="headerlink" title="2.2 切换到新分支"></a>2.2 切换到新分支</h3><p>命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout [branch name]</span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout published</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-创建-切换分支"><a href="#2-3-创建-切换分支" class="headerlink" title="2.3 创建+切换分支"></a>2.3 创建+切换分支</h3><p>创建分支的同时切换到该分支上，命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b [branch name]</span><br></pre></td></tr></table></figure>
+
+<p>git checkout -b [branch name] 的效果相当于以下两步操作：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch [branch name]</span><br><span class="line">git checkout [branch name]</span><br></pre></td></tr></table></figure>
+<h2 id="3-、分支删除"><a href="#3-、分支删除" class="headerlink" title="3 、分支删除"></a>3 、分支删除</h2><h3 id="3-1-删除本地分支"><a href="#3-1-删除本地分支" class="headerlink" title="3.1 删除本地分支"></a>3.1 删除本地分支</h3><p>命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d [branch name]</span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d published</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-删除github远程分支"><a href="#3-2-删除github远程分支" class="headerlink" title="3.2 删除github远程分支"></a>3.2 删除github远程分支</h3><p>命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :[branch name]</span><br></pre></td></tr></table></figure>
+
+<p>分支名前的冒号代表删除，例如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :published</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-、分支重命名"><a href="#4-、分支重命名" class="headerlink" title="4 、分支重命名"></a>4 、分支重命名</h2><h3 id="4-1-本地分支重命名"><a href="#4-1-本地分支重命名" class="headerlink" title="4.1 本地分支重命名"></a>4.1 本地分支重命名</h3><p>命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -m oldbranchname newbranchname</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-远程分支重命名"><a href="#4-2-远程分支重命名" class="headerlink" title="4.2 远程分支重命名"></a>4.2 远程分支重命名</h3><p>修改远程分支，需要将本地分支重命名为新分支名称，然后删除远程分支，再把本地分支上传，命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git branch -m old_branch new_branch</span><br><span class="line">git push origin :old_branch</span><br><span class="line">git push --set-upstream origin new_branch</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-、分支整合"><a href="#5-、分支整合" class="headerlink" title="5 、分支整合"></a>5 、分支整合</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<p>git pull &#x3D; git fetch + git merge</p>
+<h2 id="6-、分支推送"><a href="#6-、分支推送" class="headerlink" title="6 、分支推送"></a>6 、分支推送</h2><h3 id="6-1-分支强制推送"><a href="#6-1-分支强制推送" class="headerlink" title="6.1 分支强制推送"></a>6.1 分支强制推送</h3><p>命令如下，-f代表强制推送</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin [branch name] [-f]</span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin published</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-先pull，再推送"><a href="#6-2-先pull，再推送" class="headerlink" title="6.2 先pull，再推送"></a>6.2 先pull，再推送</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+        
+        
+          <blockquote id="copyright">
+              <p>本文链接: <a href="https://azurelake.cn/posts/8420bea7227f/">https://azurelake.cn/posts/8420bea7227f/</a></p>
+              <p>版权声明: 转载请注明出处(必须保留作者署名及链接)</p>
+          </blockquote>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
+
+          
+    <div class="social-share">
+      <span>分享到:</span>
+    </div>
+
+
+
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
+  <article id="post-hello" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="p-name article-title" href="/posts/064ee797084f/">Hello</a>
+    </h2>
+  
+
+
+      </header>
+    
+    <div class="article-meta">
+      
+      <span class="article-date">
+  <i class="fa fa-date"></i>
+  <time class="dt-published" datetime="2019-07-27T02:14:26.000Z" itemprop="datePublished">2019年07月27日</time>
+</span>
+      
+  <div class="article-category">
+    <i class="fa fa-classify"></i>
+    <a class="article-category-link" href="/categories/%E6%9D%82%E6%96%87%E7%AC%94%E6%9C%AD/">杂文笔札</a>
+  </div>
+
+      
+      
+<a href="/posts/064ee797084f/#comments" class="article-comment-link">
+  
+  <i class="fa fa-commt"></i>
+  留言
+</a>
+
+
+    </div>
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Hello，卷卷</p>
+
+        
+        
+          <blockquote id="copyright">
+              <p>本文链接: <a href="https://azurelake.cn/posts/064ee797084f/">https://azurelake.cn/posts/064ee797084f/</a></p>
+              <p>版权声明: 转载请注明出处(必须保留作者署名及链接)</p>
+          </blockquote>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div class="article-tag-wrap">
+          
+
+          
+          
+    <div class="social-share">
+      <span>分享到:</span>
+    </div>
+
+
+
+        </div>
+      
+      
+      
+    </footer>
+  </div>
+</article>
+
+
+
+    <nav id="page-nav">
+
+<a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+</nav>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-posts"></i> 最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/posts/23aceb4f31cf/">植物大战僵尸2之潘妮课堂</a>
+          </li>
+        
+          <li>
+            <a href="/posts/92ca3251dd02/">Top 10 lazy email habits 使用电子邮件的十大懒习</a>
+          </li>
+        
+          <li>
+            <a href="/posts/60ba715443f5/">有关“沧浪”的古诗词</a>
+          </li>
+        
+          <li>
+            <a href="/posts/22516cb819d9/">腾讯，请停止你的无端污名化！</a>
+          </li>
+        
+          <li>
+            <a href="/posts/71d5e3d3fcd6/">水龙头维修记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-tag"></i> 标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Aruba/" style="font-size: 10px;">Aruba</a> <a href="/tags/Bing/" style="font-size: 10px;">Bing</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/CMake/" style="font-size: 10px;">CMake</a> <a href="/tags/Clang/" style="font-size: 10px;">Clang</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/Git/" style="font-size: 20px;">Git</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/%E4%BA%BA%E7%94%9F%E5%8A%B1%E5%BF%97/" style="font-size: 20px;">人生励志</a> <a href="/tags/%E5%84%BF%E7%AB%A5%E7%94%9F%E9%95%BF%E5%8F%91%E8%82%B2/" style="font-size: 20px;">儿童生长发育</a> <a href="/tags/%E5%95%86%E5%8A%A1%E5%86%99%E4%BD%9C/" style="font-size: 20px;">商务写作</a> <a href="/tags/%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E/" style="font-size: 10px;">安全漏洞</a> <a href="/tags/%E6%89%A7%E8%A1%8C%E5%8A%9B/" style="font-size: 10px;">执行力</a> <a href="/tags/%E7%AE%B4%E8%A8%80/" style="font-size: 20px;">箴言</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">网络技术</a> <a href="/tags/%E8%81%8C%E4%B8%9A%E8%AF%84%E4%BC%B0/" style="font-size: 10px;">职业评估</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-classify"></i> 文章分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%88%90%E5%8A%9F%E5%AD%A6/">成功学</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E6%96%87%E7%AC%94%E6%9C%AD/">杂文笔札</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%B2%E5%84%BF/">育儿</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a><span class="category-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-archive"></i> 存档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024年</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023年</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022年</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021年</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020年</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019年</a><span class="archive-list-count">10</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-tag"></i> 文章标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Aruba/" rel="tag">Aruba</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bing/" rel="tag">Bing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CMake/" rel="tag">CMake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Clang/" rel="tag">Clang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/" rel="tag">Excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%94%9F%E5%8A%B1%E5%BF%97/" rel="tag">人生励志</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%84%BF%E7%AB%A5%E7%94%9F%E9%95%BF%E5%8F%91%E8%82%B2/" rel="tag">儿童生长发育</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%95%86%E5%8A%A1%E5%86%99%E4%BD%9C/" rel="tag">商务写作</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E/" rel="tag">安全漏洞</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%A7%E8%A1%8C%E5%8A%9B/" rel="tag">执行力</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%B4%E8%A8%80/" rel="tag">箴言</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" rel="tag">网络技术</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%8C%E4%B8%9A%E8%AF%84%E4%BC%B0/" rel="tag">职业评估</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title"><i class="fa fa-link"></i> 友情链接</h3>
+    <div class="widget">
+      <ul>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://finisky.github.io/">Finisky Garden</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://dusays.com/">杜老师说</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://www.iszy.cc/">随遇而安</a>
+        </li>
+      
+        <li>
+          <a target="_blank" rel="noopener" href="https://zyyyyy.com/">禅茶一味</a>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <a id="totop" href="#top"></a>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <p>
+        <a href="/sitemap.xml">网站地图</a>
+        <span> | </span><a href="/atom.xml">订阅本站</a>
+        <span> | </span><a href="/about/">联系博主</a>       
+      </p>
+      
+        <p>本站总访客数：
+          <i class="fa fa-visitors"></i>
+          <i id="busuanzi_container_site_uv"><i id="busuanzi_value_site_uv"></i></i>人，本站总访问量：
+          <i class="fa fa-views"></i>
+          <i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次
+          <span> | Copyright &copy; 2025 Matrix</span>
+        </p>
+      
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+  </div>
+  
+<script src="/js/search.json.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+  
+<script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<!-- 复制添加版权信息 -->
+<script>
+    var selfLogin = false;
+    var follow = $('#profile_block').find('#p_b_follow');
+    var block = follow.length >= 1 ? follow[0] : "";
+    var followText = (block != null && block != undefined) ? block.innerHTML : "";
+    if(followText == "") selfLogin = true;
+ 
+    var pageInfo = '\r\n---------------------\r\n'
+        + '© 版权声明：著作权归作者所有，商业转载请联系作者获得授权，非商业转载请注明出处。\r\n'
+        + '作者：Matrix\r\n源地址：' + document.location.href
+        + '\r\n来源：沧浪湖，转载请附上博文链接！';
+ 
+    document.addEventListener('copy', function (ev) {
+        var targetHTML = $.trim($(ev.target).html());
+        // console.log("targetHTML:" + targetHTML)
+        if (targetHTML == "") return;
+        if (!(targetHTML.startsWith('<table class="hljs-ln"') && targetHTML.endsWith('</table>')) || !selfLogin)  // isLogined
+        {
+            var selected = window.getSelection();
+            var selectedText = selected.toString();  
+            let copyRightStr = (selectedText + pageInfo).replace(/\n/g, '\r\n'); // Solve the line breaks conversion issue
+ 
+            ev.clipboardData.setData('text/plain', `${copyRightStr}`);
+            ev.preventDefault();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
